@@ -1,0 +1,105 @@
+rm(list=ls())
+#*******************************************************************************
+## Analysis of horizontal transfer between individual taxonomic categories
+#*******************************************************************************
+# R version 4.1.3
+# autor: Jana Schwarzerova
+##==============================================================================
+
+##==============================================================================
+#Path:
+#setwd('...')
+
+# Function to read the HGT genome list and create an initial matrix
+create_initial_matrix <- function(file_path) {
+    hgtList <- read.delim2(file_path, header = FALSE, sep = ' ')
+    hgtList$V1 <- as.factor(hgtList$V1)
+    hgtList$V2 <- as.factor(hgtList$V2)
+    
+    r_lvl <- levels(hgtList$V2)
+    c_lvl <- levels(hgtList$V1)
+    
+    mFin <- matrix(0, nrow = length(r_lvl), ncol = length(c_lvl))
+    row.names(mFin) <- r_lvl
+    colnames(mFin) <- c_lvl
+    
+    return(mFin)
+}
+
+# Function to add entries to the matrix based on the genome pairs
+add_entries_to_matrix <- function(matrix, genome_pairs_file) {
+    df <- read.csv2(genome_pairs_file, header = TRUE, sep = ',', row.names = 'new_ID')
+    table <- df
+    
+    genomes <- colnames(table)
+    genome_pairs <- combn(genomes, 2)
+    
+    new_df <- data.frame(matrix(ncol = length(genomes), nrow = length(genomes)), row.names = genomes)
+    colnames(new_df) <- genomes
+    
+    for (index in 1:dim(genome_pairs)[2]) {
+        gene_sum <- sum(table[genome_pairs[1, index]] & table[genome_pairs[2, index]])
+        
+        new_df[genome_pairs[1, index], genome_pairs[2, index]] <- gene_sum
+        new_df[genome_pairs[2, index], genome_pairs[1, index]] <- gene_sum
+    }
+    
+    return(new_df)
+}
+
+# Function to process the final matrix and generate heatmap
+generate_heatmap <- function(final_matrix_file, tree_list_file) {
+    final_mFin_ff <- read.csv(final_matrix_file)
+    row.names(final_mFin_ff) <- final_mFin_ff[, 1]
+    final_mFin_ff <- final_mFin_ff[, -1]
+    
+    NamesInRightOrder <- read.delim2(tree_list_file, header = FALSE)
+    NamesInRightOrder$V1 <- rev(NamesInRightOrder$V1)
+    NamesInRightOrder <- as.data.frame(NamesInRightOrder)
+    NamesInRightOrder_short <- NamesInRightOrder
+    
+    final_mFin_ff_p <- matrix(NA, nrow = nrow(NamesInRightOrder), ncol = nrow(NamesInRightOrder))
+    row.names(final_mFin_ff_p) <- t(NamesInRightOrder_short)
+    colnames(final_mFin_ff_p) <- t(NamesInRightOrder_short)
+    r <- integer(0)
+    s <- integer(0)
+    
+    for (i in 1:(ncol(final_mFin_ff))) {
+        for (j in 1:(nrow(final_mFin_ff))) {
+            r_p <- grep(rownames(final_mFin_ff)[i], row.names(final_mFin_ff_p))
+            s_p <- grep(colnames(final_mFin_ff)[j], colnames(final_mFin_ff_p))
+            for (n in 1:length(r_p)) {
+                for (m in 1:length(s_p)) {
+                    ind_r <- r_p[n]
+                    ind_s <- s_p[m]
+                    if (!((is.na(ind_r) || (length(ind_r) == 0)))) {
+                        if (nchar(as.character(rownames(final_mFin_ff)[i])) == nchar(rownames(final_mFin_ff_p)[ind_r])) {
+                            r <- r_p[n]
+                        }
+                    }
+                    if (!((is.na(ind_s) || (length(ind_s) == 0)))) {
+                        if (nchar(as.character(colnames(final_mFin_ff)[j])) == nchar(rownames(final_mFin_ff_p)[ind_s])) {
+                            s <- s_p[m]
+                        }
+                    }
+                }
+            }
+            final_mFin_ff_p[r, s] <- final_mFin_ff[i, j]
+        }
+    }
+    final_mFin_ff_p[is.na(final_mFin_ff_p)] <- 0
+    
+    # Plot heatmap
+    library(RColorBrewer)
+    heatmap(log(final_mFin_ff_p), Colv = NA, Rowv = NA, col = colorRampPalette(brewer.pal(9, "Blues"))(25), scale = "none") 
+    
+    return(final_mFin_ff_p)
+}
+
+# Call functions
+initial_matrix <- create_initial_matrix('HGT_genome_list_v2_oprava.txt')
+genome_pairs_matrix <- add_entries_to_matrix(initial_matrix, 'matrix_04_05_2023_38rucne.csv')
+final_matrix <- generate_heatmap('matrix_ff.csv', 'Tree_list_Rectangular.txt')
+
+# Write final matrix to file
+write.csv(final_matrix, "final_matrix.csv")
