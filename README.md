@@ -1,3 +1,3 @@
-# HorGeneVis: Phylogenetically Divergent Bacteria Horizontal Gene Transfer Detection
+# HorGeneVis: Horizontal Gene Transfer Visualization
 
 TEXT TEXT TEXT
