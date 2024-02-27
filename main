@@ -12,7 +12,7 @@ rm(list=ls())
 
 # Function to read the HGT genome list and create an initial matrix
 create_initial_matrix <- function(file_path) {
-    hgtList <- read.delim2(file_path, header = FALSE, sep = ' ')
+    hgtList <- read.delim(file_path, header = FALSE, sep = '')
     hgtList$V1 <- as.factor(hgtList$V1)
     hgtList$V2 <- as.factor(hgtList$V2)
     
