@@ -68,7 +68,7 @@ generate_heatmap(final_mFin_ff_p, palette = "BrBG")
 
 # Generate heatmap using the "Accent" palette and 25 colors
 generate_heatmap(final_mFin_ff_p, palette = "Accent")
-
+```
 
 Author
 This analysis was conducted by Jana Schwarzerova.
