@@ -1,8 +1,6 @@
 # HorGeneVis: Horizontal Gene Transfer Visualization
 
-# Horizontal Gene Transfer Analysis
-
-This project involves the analysis of horizontal gene transfer (HGT) between individual taxonomic categories using genomic data. The analysis is performed using R version 4.1.3.
+This R toolbox involves the analysis of horizontal gene transfer (HGT) between individual taxonomic categories using genomic data. The analysis is performed using R version 4.1.3.
 
 ## Analysis Overview
 
