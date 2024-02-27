@@ -1,7 +1,3 @@
-# Function to read the HGT genome list and create an initial matrix
-#Path:
-setwd('...')
-
 # Function to create an initial matrix from a genome list file
 # Args:
 #   file_path (str): Path to the genome list file.
