@@ -1,6 +1,8 @@
-# Function to read the HGT genome list and create an initial matrix
-#Path:
-setwd('...')
+# Function to create an initial matrix from a genome list file
+# Args:
+#   file_path (str): Path to the genome list file.
+# Returns:
+#   matrix: Initial matrix with rows and columns corresponding to unique genome IDs.
 
 
 create_initial_matrix <- function(file_path) {
