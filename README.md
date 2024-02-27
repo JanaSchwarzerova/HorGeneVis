@@ -70,28 +70,26 @@ generate_heatmap(final_mFin_ff_p, palette = "BrBG")
 generate_heatmap(final_mFin_ff_p, palette = "Accent")
 ```
 
-Author
-This analysis was conducted by Jana Schwarzerova.
-
-Copy code
-This readme file provides an overview of the Horizontal Gene Transfer (HGT) analysis project conducted in R. It outlines the analysis steps, functions used, and example usage.
-
 Analysis Overview
 The analysis involves the following steps:
 
 Initialization of Matrix: Creation of an initial matrix from a genome list file.
 Processing Phylogenetic Tree: Processing of a phylogenetic tree file to extract new names.
+
 Adding Entries to Matrix: Addition of entries to the matrix based on genome pairs.
 Final Matrix Processing: Processing of the final matrix based on a tree list file.
+
 Heatmap Generation: Generation of heatmaps from the final matrix to visualize the results.
+
 Functions
 create_initial_matrix: Creates an initial matrix from a genome list file.
 process_tree: Processes a phylogenetic tree file and extracts new names.
 add_entries_to_matrix: Adds entries to the matrix based on genome pairs.
 process_final_matrix: Processes the final matrix based on a tree list file.
 generate_heatmap: Generates a heatmap from a matrix.
+
 Example Usage
-r
+```r
 Copy code
 # Read the HGT genome list
 hgtList <- read.delim2('HGT_output_CD_hit_fv.txt', header = FALSE, sep = '')
@@ -120,5 +118,7 @@ generate_heatmap(final_mFin_ff_p, palette = "BrBG")
 
 # Generate heatmap using the "Accent" palette and 25 colors
 generate_heatmap(final_mFin_ff_p, palette = "Accent")
-Author
-This analysis was conducted by Jana Schwarzerova.
+```
+
+Copy code
+This readme file provides an overview of the Horizontal Gene Transfer (HGT) analysis project conducted in R. It outlines the analysis steps, functions used, and example usage.
