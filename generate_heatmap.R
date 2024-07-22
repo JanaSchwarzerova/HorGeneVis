@@ -34,7 +34,7 @@ generate_heatmap_with_legend <- function(final_mFin_ff_p, palette = "BrBG") {
 }
 
 # Example usage:
-generate_heatmap_with_legend(new_df, palette = "Greys")
+# generate_heatmap_with_legend(new_df, palette = "Greys")
 
 
 

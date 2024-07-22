@@ -60,8 +60,8 @@ create_initial_matrix <- function(hgtList) {
     return(mFin_T)
 }
 
-# Read the HGT genome list
-hgtList <- read.delim2('HGT_output_CD_hit_fv.txt', header = FALSE, sep = '')
-
-# Process the HGT genome list to create the initial matrix
-initial_matrix <- create_initial_matrix(hgtList)
+# # Read the HGT genome list
+# hgtList <- read.delim2('HGT_output_CD_hit_fv.txt', header = FALSE, sep = '')
+#
+# # Process the HGT genome list to create the initial matrix
+# initial_matrix <- create_initial_matrix(hgtList)

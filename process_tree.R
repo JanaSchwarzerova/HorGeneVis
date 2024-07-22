@@ -48,4 +48,4 @@ process_tree <- function(tree_file, mFin_T) {
 }
 
 # Call the function to process the tree file and extract new names
-new_names <- process_tree('PhylogeneticTree_newick.txt', initial_matrix)
+# new_names <- process_tree('PhylogeneticTree_newick.txt', initial_matrix)

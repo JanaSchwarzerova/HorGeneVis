@@ -64,5 +64,5 @@ process_final_matrix <- function(tree_file, mFin_ff) {
 
 # Usage:
 # Assuming mFin_ff is already defined and tree_file contains the path to the Tree_list_Rectangular.txt file
-final_mFin_ff_p <- process_final_matrix('Tree_list_Rectangular_output_IToL.txt', new_df)
-sum(final_mFin_ff_p)
+# final_mFin_ff_p <- process_final_matrix('Tree_list_Rectangular_output_IToL.txt', new_df)
+# sum(final_mFin_ff_p)

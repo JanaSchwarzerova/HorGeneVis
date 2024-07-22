@@ -34,4 +34,4 @@ add_entries_to_matrix <- function(df) {
     return(new_df)
 }
 
-new_df <- add_entries_to_matrix(initial_matrix)
+# new_df <- add_entries_to_matrix(initial_matrix)

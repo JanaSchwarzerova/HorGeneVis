@@ -11,6 +11,6 @@ create_chord_diagram <- function(subset_new_df, transparency = 0.5) {
 
 # Example usage:
 # Assuming 'new_df' is defined with appropriate data, provide the subset
-create_chord_diagram(new_df[1:15, 16:20])
-
+# create_chord_diagram(new_df[1:15, 16:20])
+#
 
