@@ -1,0 +1,1 @@
+myTree <- ape::read.tree("data-raw/PhylogeneticTree_newick.txt")

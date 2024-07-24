@@ -11,4 +11,5 @@ Description:
 License: GPL-3
 Depends: R(>= 4.1.3)
 Imports: circlize, RColorBrewer
+LazyData: true
 URL: https://github.com/JanaSchwarzerova/HorGeneVis
