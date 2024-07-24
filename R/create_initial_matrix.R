@@ -2,8 +2,12 @@
 #'
 #' @param file_path Path to the genome list file.
 #' @return Returns initial matrix with rows and columns corresponding to unique genome IDs.
+#' @export
 #' @examples
-#' initial_matrix <- create_initial_matrix('HGT_output_CD_hit.txt')
+#' # Example data
+#' cd_hit_file <- HorGeneVis_example_data("HGT_output_CD_hit.txt")
+#'
+#' initial_matrix <- create_initial_matrix(cd_hit_file)
 create_initial_matrix <- function(file_path) {
     # Read the HGT genome list
     hgtList <- read.delim2(file_path, header = FALSE, sep = '')

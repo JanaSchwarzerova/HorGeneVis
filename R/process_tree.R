@@ -3,12 +3,18 @@
 #' @param tree_file Path to the phylogenetic tree file.
 #' @param mFin_T Matrix where the column names are to be matched. The output from create_initial_matrix() function.
 #' @returns Vector of new names extracted from the tree file.
+#' @export
+#' @seealso [create_initial_matrix()]
 #' @examples
-#' initial_matrix <- create_initial_matrix('HGT_output_CD_hit.txt')
-#' new_names <- process_tree('PhylogeneticTree_newick.txt', initial_matrix)
+#' Example data
+#' cd_hit_file <- HorGeneVis_example_data("HGT_output_CD_hit.txt")
+#' tree_file <- HorGeneVis_example_data("PhylogeneticTree_newick.txt")
+#'
+#' initial_matrix <- create_initial_matrix(cd_hit_file)
+#' new_names <- process_tree(tree_file, initial_matrix)
 process_tree <- function(tree_file, mFin_T) {
     # Read the phylogenetic tree file
-    myTree <- ape::read.tree(tree_file)
+    myTree <- read.tree(tree_file)
     
     # Extract tip labels from the tree
     bac <- myTree[["tip.label"]]

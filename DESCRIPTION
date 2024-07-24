@@ -2,14 +2,29 @@ Package: HorGeneVis
 Type: Package
 Title: Horizontal Gene Transfer Visualization
 Version: 1.0
-Date: 2024-07-11
-Author: Jana Schwarzerova
-Maintainer: <jana.schwarzerova@vut.cz>
+Authors@R: c(
+    person("Jana", "Schwarzerova", email = "Jana.Schwarzerova@vut.cz", role = c("aut", "cre")),
+    person("Laxmipriya", "Rajasekaran", role = "aut"),
+    person("Katerina", "Jureckova", role = "aut"),
+    person("Julie", "Nejezchlebova", role = "aut"),
+    person("Margaret", "Varga", role = "aut"),
+    person("Valentine", "Provaznik", role = "aut"),
+    person("Wolfram", "Weckwerth", role = "aut"),
+    person("Darina", "Cejkova", role = c("aut", "fnd"))
+    )
 Description:
     This package involves the analysis and visualization of horizontal gene transfer (HGT) between individual taxonomic
     categories using genomic data.
 License: GPL-3
-Depends: R(>= 4.1.3)
-Imports: circlize, RColorBrewer
+Encoding: UTF-8
 LazyData: true
+Imports: 
+    ape,
+    circlize,
+    RColorBrewer
+References:
+    - Schwarzerova, J., Zeman, M., Babak, V., Jureckova, K., Nykrynova, M., Varga, M., et al. (2024). Detecting horizontal gene transfer among microbiota: an innovative pipeline for identifying co-shared genes within the mobilome through advanced comparative analysis. Microbiol. Spectr. 12, e01964-23. doi:10.1128/spectrum.01964-23.
 URL: https://github.com/JanaSchwarzerova/HorGeneVis
+BugReports: https://github.com/JanaSchwarzerova/HorGeneVis/issues
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)

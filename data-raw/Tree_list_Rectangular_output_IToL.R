@@ -1,1 +1,0 @@
-NamesInRightOrder <- read.delim2("data-raw/Tree_list_Rectangular_output_IToL.txt", header = FALSE)

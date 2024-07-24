@@ -2,8 +2,13 @@
 #'
 #' @param df Input data frame containing genomes as columns.
 #' @returns Data frame with pairwise gene sums.
+#' @export
+#' @seealso [create_initial_matrix()]
 #' @examples
-#' initial_matrix <- create_initial_matrix('HGT_output_CD_hit.txt')
+#' # Example data
+#' cd_hit_file <- HorGeneVis_example_data("HGT_output_CD_hit.txt")
+#'
+#' initial_matrix <- create_initial_matrix(cd_hit_file)
 #' new_df <- add_entries_to_matrix(initial_matrix)
 add_entries_to_matrix <- function(df) {
     # Copy input dataframe

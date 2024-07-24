@@ -3,10 +3,16 @@
 #' @param tree_file Path to the tree list file.
 #' @param mFin_ff Input matrix to process.
 #' @returns Processed final matrix.
+#' @export
+#' @seealso [create_initial_matrix()] [add_entries_to_matrix()]
 #' @examples
-#' initial_matrix <- create_initial_matrix('HGT_output_CD_hit.txt')
+#' # Example data
+#' cd_hit_file <- HorGeneVis_example_data("HGT_output_CD_hit.txt")
+#' tree_list_file <- HorGeneVis_example_data("Tree_list_Rectangular_output_IToL.txt")
+#'
+#' initial_matrix <- create_initial_matrix(cd_hit_file)
 #' new_df <- add_entries_to_matrix(initial_matrix)
-#' final_mFin_ff_p <- process_final_matrix('Tree_list_Rectangular_output_IToL.txt', new_df)
+#' final_mFin_ff_p <- process_final_matrix(tree_list_file, new_df)
 #' sum(final_mFin_ff_p)
 process_final_matrix <- function(tree_file, mFin_ff) {
     # Read the tree list file

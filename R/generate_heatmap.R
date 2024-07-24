@@ -3,10 +3,18 @@
 #' @param final_mFin_ff_p Input matrix for generating the heatmap.
 #' @param palette Name of the color palette to use (default is "Blues").
 #' @param n_colors Number of colors in the palette (default is 25).
+#' @export
+#' @seealso [create_initial_matrix()] [add_entries_to_matrix()] [process_final_matrix()]
 #' @examples
-#' initial_matrix <- create_initial_matrix('HGT_output_CD_hit.txt')
+#' # Example data
+#' cd_hit_file <- HorGeneVis_example_data("HGT_output_CD_hit.txt")
+#' tree_file <- HorGeneVis_example_data("PhylogeneticTree_newick.txt")
+#' tree_list_file <- HorGeneVis_example_data("Tree_list_Rectangular_output_IToL.txt")
+#'
+#' initial_matrix <- create_initial_matrix(cd_hit_file)
+#' new_names <- process_tree(tree_file, initial_matrix)
 #' new_df <- add_entries_to_matrix(initial_matrix)
-#' final_mFin_ff_p <- process_final_matrix('Tree_list_Rectangular_output_IToL.txt', new_df)
+#' final_mFin_ff_p <- process_final_matrix(tree_list_file, new_df)
 #'
 #' # Generate heatmap using the default "Blues" palette and 25 colors
 #' generate_heatmap(final_mFin_ff_p)
