@@ -21,6 +21,14 @@ The analysis involves several steps:
 
 5. **Heatmap Generation**: Heatmaps are generated from the final matrix to visualize the results.
 
+## Installation
+
+`HorGeneVis` can be installed from GitHub by running following command in R, but `devtools` is required.
+```r
+# install.packages("devtools")
+devtools::install_github("https://github.com/JanaSchwarzerova/HorGeneVis")
+```
+
 ## Functions
 
 ### `create_initial_matrix()`
@@ -44,7 +52,7 @@ Function to process the final matrix based on a tree list file.
 Function to generate a heatmap from a matrix.
 
 ## Example Usage
-HorGeneVis contains example data which were used to demonstrate its function. 
+`HorGeneVis` contains example data which were used to demonstrate its functionality. 
 Use `HorGeneVis_example_data()` function to access them.
 ```r
 # Example data
@@ -82,3 +90,12 @@ generate_heatmap(final_mFin_ff_p, palette = "Accent")
 # Generate chord diagram
 create_chord_diagram(new_df[1:15, 16:20])
 ```
+
+## References
+1. Schwarzerova, J., Rajasekaran, L., Jureckova, K., Nejezchlebova, J., Varga, M., Provaznik, V., et al. (2024). 
+   “Visualizing Horizontal Gene Transfer Detection in Phylogenetically Divergent Bacteria,” in *Bioinformatics and 
+   Biomedical Engineering*, 1–11. [doi:10.1007/978-3-031-64636-2_20](https://doi.org/10.1007/978-3-031-64636-2_20).
+2. Schwarzerova, J., Zeman, M., Babak, V., Jureckova, K., Nykrynova, M., Varga, M., et al. (2024). Detecting horizontal
+   gene transfer among microbiota: an innovative pipeline for identifying co-shared genes within the mobilome through 
+   advanced comparative analysis. *Microbiol. Spectr.* 12, e01964-23. 
+   [doi:10.1128/spectrum.01964-23](https://doi.org/10.1128/spectrum.01964-23).

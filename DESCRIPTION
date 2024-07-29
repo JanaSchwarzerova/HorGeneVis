@@ -19,7 +19,7 @@ Description:
     visualization techniques to enhance the accuracy and efficiency of HGT event detection. We applied it to a diverse
     set of bacterial genomes from chicken and pig gut and expanded the results with established methods for HGT
     detection. The findings demonstrate the capability of our visualization techniques to pinpoint HGT events, offering
-     a valuable tool for researchers to explore the intricate dynamics of bacterial genome evolution.
+    a valuable tool for researchers to explore the intricate dynamics of bacterial genome evolution.
 License: GPL-3
 Encoding: UTF-8
 Imports: 
@@ -27,9 +27,12 @@ Imports:
     circlize,
     RColorBrewer
 References:
+    - Schwarzerova, J., Rajasekaran, L., Jureckova, K., Nejezchlebova, J., Varga, M., Provaznik, V., et al. (2024).
+      “Visualizing Horizontal Gene Transfer Detection in Phylogenetically Divergent Bacteria,” in Bioinformatics and
+      Biomedical Engineering, 1–11.
     - Schwarzerova, J., Zeman, M., Babak, V., Jureckova, K., Nykrynova, M., Varga, M., et al. (2024).
-    Detecting horizontal gene transfer among microbiota: an innovative pipeline for identifying co-shared genes within
-    the mobilome through advanced comparative analysis. Microbiol. Spectr. 12, e01964-23. doi:10.1128/spectrum.01964-23.
+      Detecting horizontal gene transfer among microbiota: an innovative pipeline for identifying co-shared genes within
+      the mobilome through advanced comparative analysis. Microbiol. Spectr. 12, e01964-23. doi:10.1128/spectrum.01964-23.
 URL: https://github.com/JanaSchwarzerova/HorGeneVis
 BugReports: https://github.com/JanaSchwarzerova/HorGeneVis/issues
 RoxygenNote: 7.3.2
