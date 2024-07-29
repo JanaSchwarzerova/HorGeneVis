@@ -11,9 +11,9 @@
 #' tree_file <- HorGeneVis_example_data("PhylogeneticTree_newick.txt")
 #' tree_list_file <- HorGeneVis_example_data("Tree_list_Rectangular_output_IToL.txt")
 HorGeneVis_example_data <- function(path = NULL) {
-  if (is.null(path)) {
-    dir(system.file("extdata", package = "HorGeneVis"))
-  } else {
-    system.file("extdata", path, package = "HorGeneVis", mustWork = TRUE)
-  }
+    if (is.null(path)) {
+        dir(system.file("extdata", package = "HorGeneVis"))
+    } else {
+        system.file("extdata", path, package = "HorGeneVis", mustWork = TRUE)
+    }
 }

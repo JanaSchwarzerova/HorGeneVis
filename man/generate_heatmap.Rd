@@ -13,6 +13,9 @@ generate_heatmap(final_mFin_ff_p, palette = "BrBG", n_colors = 25)
 
 \item{n_colors}{Number of colors in the palette (default is 25).}
 }
+\value{
+A list with components of the heatmap
+}
 \description{
 Generate a heatmap from a matrix
 }

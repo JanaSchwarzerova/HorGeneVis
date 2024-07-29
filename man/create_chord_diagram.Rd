@@ -11,6 +11,9 @@ create_chord_diagram(subset_new_df, transparency = 0.5)
 
 \item{transparency}{Transparency level for the chord diagram (default is 0.5).}
 }
+\value{
+A data frame which contains positions of links in Chord Diagram
+}
 \description{
 Create a chord diagram with default settings
 }

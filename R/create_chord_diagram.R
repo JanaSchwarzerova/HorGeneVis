@@ -2,6 +2,7 @@
 #'
 #' @param subset_new_df Subset of the input data frame for creating the chord diagram.
 #' @param transparency Transparency level for the chord diagram (default is 0.5).
+#' @returns A data frame which contains positions of links in Chord Diagram
 #' @export
 #' @seealso [create_initial_matrix()] [add_entries_to_matrix()]
 #' @examples

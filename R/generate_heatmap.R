@@ -3,6 +3,7 @@
 #' @param final_mFin_ff_p Input matrix for generating the heatmap.
 #' @param palette Name of the color palette to use (default is "Blues").
 #' @param n_colors Number of colors in the palette (default is 25).
+#' @returns A list with components of the heatmap
 #' @export
 #' @seealso [create_initial_matrix()] [add_entries_to_matrix()] [process_final_matrix()]
 #' @examples

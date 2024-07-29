@@ -6,7 +6,7 @@
 #' @export
 #' @seealso [create_initial_matrix()]
 #' @examples
-#' Example data
+#' # Example data
 #' cd_hit_file <- HorGeneVis_example_data("HGT_output_CD_hit.txt")
 #' tree_file <- HorGeneVis_example_data("PhylogeneticTree_newick.txt")
 #'

@@ -18,7 +18,7 @@ Vector of new names extracted from the tree file.
 Process a phylogenetic tree file and extract new names
 }
 \examples{
-Example data
+# Example data
 cd_hit_file <- HorGeneVis_example_data("HGT_output_CD_hit.txt")
 tree_file <- HorGeneVis_example_data("PhylogeneticTree_newick.txt")
 
