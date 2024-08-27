@@ -1,0 +1,39 @@
+Package: HorGeneVis
+Type: Package
+Title: Horizontal Gene Transfer Visualization
+Version: 1.0.0
+Authors@R: c(
+    person("Jana", "Schwarzerova", email = "Jana.Schwarzerova@vut.cz", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0003-2918-9313")),
+    person("Laxmipriya", "Rajasekaran", role = "aut", comment = c(ORCID = "0009-0000-6401-7731")),
+    person("Katerina", "Jureckova", role = "aut", comment = c(ORCID = "0000-0001-5143-9521")),
+    person("Julie", "Nejezchlebova", role = "aut", comment = c(ORCID = "0009-0008-2290-6467")),
+    person("Margaret", "Varga", role = "aut", comment = c(ORCID = "0000-0002-9086-1626")),
+    person("Valentine", "Provaznik", role = "aut", comment = c(ORCID = "0000-0002-3422-7938")),
+    person("Wolfram", "Weckwerth", role = "aut", comment = c(ORCID = "0000-0002-9719-6358")),
+    person("Darina", "Cejkova", role = c("aut", "fnd"), comment = c(ORCID = "0000-0002-6989-6330"))
+    )
+Description:
+    This package involves the analysis and visualization of horizontal gene transfer (HGT) between individual taxonomic
+    categories using genomic data. The tool combines the integration of a heat-map matrix with phylogenetic analysis
+    visualization techniques to enhance the accuracy and efficiency of HGT event detection. We applied it to a diverse
+    set of bacterial genomes from chicken and pig gut and expanded the results with established methods for HGT
+    detection. The findings demonstrate the capability of our visualization techniques to pinpoint HGT events, offering
+    a valuable tool for researchers to explore the intricate dynamics of bacterial genome evolution.
+License: GPL-3
+Encoding: UTF-8
+Imports: 
+    ape,
+    circlize,
+    RColorBrewer
+References:
+    - Schwarzerova, J., Rajasekaran, L., Jureckova, K., Nejezchlebova, J., Varga, M., Provaznik, V., et al. (2024).
+      “Visualizing Horizontal Gene Transfer Detection in Phylogenetically Divergent Bacteria,” in Bioinformatics and
+      Biomedical Engineering, 1–11.
+    - Schwarzerova, J., Zeman, M., Babak, V., Jureckova, K., Nykrynova, M., Varga, M., et al. (2024).
+      Detecting horizontal gene transfer among microbiota: an innovative pipeline for identifying co-shared genes within
+      the mobilome through advanced comparative analysis. Microbiol. Spectr. 12, e01964-23. doi:10.1128/spectrum.01964-23.
+URL: https://github.com/JanaSchwarzerova/HorGeneVis
+BugReports: https://github.com/JanaSchwarzerova/HorGeneVis/issues
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)

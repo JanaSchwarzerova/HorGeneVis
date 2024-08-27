@@ -1,0 +1,20 @@
+bibentry(
+  bibtype  = "InBook",
+  booktitle= "Bioinformatics and Biomedical Engineering",
+  chapter  = "20",
+  title    = "Visualizing Horizontal Gene Transfer Detection in Phylogenetically Divergent Bacteria",
+  author   = c(
+    person("Jana", "Schwarzerova", email = "Jana.Schwarzerova@vut.cz", role = c("aut", "cre")),
+    person("Laxmipriya", "Rajasekaran", role = "aut"),
+    person("Katerina", "Jureckova", role = "aut"),
+    person("Julie", "Nejezchlebova", role = "aut"),
+    person("Margaret", "Varga", role = "aut"),
+    person("Valentine", "Provaznik", role = "aut"),
+    person("Wolfram", "Weckwerth", role = "aut"),
+    person("Darina", "Cejkova", role = c("aut", "fnd"))
+    ),
+  year     = "2024",
+  pages    = "1-11",
+  publisher= "Springer Cham",
+  doi      = "10.1007/978-3-031-64636-2_20"
+)
